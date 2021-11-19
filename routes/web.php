@@ -21,3 +21,8 @@ $router->post('/register', [
     'as' => 'register',
     'uses' => 'RegisterController@store'
 ]);
+
+$router->post('/login', [
+    'as' => 'login',
+    'uses' => 'LoginController@authenticate'
+]);
