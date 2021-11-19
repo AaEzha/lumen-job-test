@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "30b944fd-749f-4ece-9247-17b6b5865c82",
+		"name": "Lumen-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Ahmad",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Nurfachmi",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "aaezha@gmail.com",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "",
+							"description": "nullable",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register - Sukses",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Ahmad",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Nurfachmi",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "aaezha@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"description": "nullable",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Nov 2021 15:55:30 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Nov 2021 15:55:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"first_name\": \"Ahmad\",\n    \"last_name\": \"Nurfachmi\",\n    \"email\": \"aaezha@gmail.com\",\n    \"phone\": \"\",\n    \"updated_at\": \"2021-11-19T15:55:30.000000Z\",\n    \"created_at\": \"2021-11-19T15:55:30.000000Z\",\n    \"id\": 1\n}"
+				},
+				{
+					"name": "Register - Gagal",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Reza",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Nurfachmi",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "aaezha@gmail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"description": "nullable",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Nov 2021 15:56:59 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Nov 2021 15:56:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.13"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"first_name\": [\n        \"The first name must be at least 5 characters.\"\n    ],\n    \"email\": [\n        \"The email has already been taken.\"\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8000"
+		}
+	]
+}
